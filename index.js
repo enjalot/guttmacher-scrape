@@ -62,6 +62,27 @@ scrapeTable("https://www.guttmacher.org/print/state-policy/explore/overview-abor
 
   })
 
+  
+  scrapeTable("https://www.guttmacher.org/print/state-policy/explore/abortion-policy-absence-roe")
+    .then(function(response) {
+      // save the raw data to a file
+      let data = response.tableData;
+      fs.writeFileSync("data/abortion-policy-raw.html", JSON.stringify(response.html));
+      fs.writeFileSync("data/abortion-policy-raw.json", JSON.stringify(data));
+      console.log("raw", data)
+
+      // skip the first 3 rows: the table name and the two header rows
+      let rows = data.slice(3, data.length - 1)
+      // this isn't part of the table in this page so we can't parse it
+      // without adding more scrape logic to scrape.js
+      let keyRaw = [`q Permanently enjoined by court order; law not in effect.
+        s Temporarily enjoined by court order; law not in effect.
+        †   Law includes an exception to protect the life of the patient.
+        ‡   Law includes an exception to protect the health of the patient.
+        Ψ  Law includes an exception in cases of rape.`]
+      processPage("abortion-policy", rows, absenceColumns, keyRaw);
+    })
+
   function processPage(name, data, columns, rawKey) {
     let csv = d3.csvFormatRows([Object.keys(columns)].concat(data));
 
