@@ -43,7 +43,9 @@ scrapeTable("https://www.guttmacher.org/print/state-policy/explore/overview-abor
     // save the raw data to a file
     let data = response.tableData;
     fs.writeFileSync("data/abortion-overview-raw.html", JSON.stringify(response.html));
+    console.log("wrote", "data/abortion-overview-raw.html")
     fs.writeFileSync("data/abortion-overview-raw.json", JSON.stringify(data));
+    console.log("wrote", "data/abortion-verview-raw.json")
     let page1Header = 'Overview of State Abortion Law (page 1 of 2)'
     let page2Header = 'Overview of State Abortion Law (page 2 of 2)'
     let page2Index = data.findIndex(function(element) { return element[0] == page2Header });
@@ -68,7 +70,9 @@ scrapeTable("https://www.guttmacher.org/print/state-policy/explore/overview-abor
       // save the raw data to a file
       let data = response.tableData;
       fs.writeFileSync("data/abortion-policy-raw.html", JSON.stringify(response.html));
+      console.log("wrote", "data/abortion-policy-raw.html")
       fs.writeFileSync("data/abortion-policy-raw.json", JSON.stringify(data));
+      console.log("wrote", "data/abortion-policy-raw.json")
       // console.log("raw", data)
 
       // skip the first 3 rows: the table name and the two header rows
@@ -111,6 +115,7 @@ scrapeTable("https://www.guttmacher.org/print/state-policy/explore/overview-abor
       } catch (e) {}
     }
     fs.writeFileSync(`data/${name}.csv`, csv);
+    console.log("wrote", `data/${name}.csv`)
 
     let key = {} 
     rawKey[0].split("\n").forEach(d => {
@@ -118,5 +123,6 @@ scrapeTable("https://www.guttmacher.org/print/state-policy/explore/overview-abor
       key[s.slice(0,1)] = s.slice(1).trim()
     });
     fs.writeFileSync(`data/${name}-key.json`, JSON.stringify(key));
+    console.log("wrote", `data/${name}-key.json`)
 
   }
