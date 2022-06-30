@@ -1,0 +1,25 @@
+{
+  "name": "guttmacher-scrape",
+  "version": "0.0.1",
+  "description": "scraping tables from Guttmacher Institute",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enjalot/guttmacher-scrape.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enjalot/guttmacher-scrape/issues"
+  },
+  "homepage": "https://github.com/enjalot/guttmacher-scrape#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "d3": "^7.5.0",
+    "node-fetch": "^3.2.6"
+  }
+}
