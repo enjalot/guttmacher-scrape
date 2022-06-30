@@ -1,0 +1,52 @@
+state,refusalIndividual,refusalInstitution,counselingBreastCancer,counselingFetalPain,counselingMentalHealth,waitingPeriod,parental
+AL,,,,,,48,Consent
+AK,X,Private,X,X,,,▼
+AZ,X,X,,,,24,Consent
+AR,X,X,,XФ,,72,Consent
+CA,X,Religious,,,,,▼
+CO,,,,,,,Notice
+CT,X,,,,,,
+DE,X,X,,,,,Noticeξ
+DC,,,,,,,
+FL,X,X,,,,▼,Consent and Notice
+GA,X,X,,X,,24,Notice
+HI,X,X,,,,,
+ID,X,X,,,,24,Consent
+IL,X,Private,,,,,
+IN,X,Private,,X,,18,Consent
+IA,X,Private,,,,§,Notice
+KS,X,X,X,X,X,24,Consent
+KY,X,X,,,,24,Consent
+LA,X,X,,X,X,24,Consent
+ME,X,X,,,,,
+MD,X,X,,,,,Noticeξ
+MA,X,X,,,,,Consentβ
+MI,X,X,,,X,24,Consent
+MN,X,Private,,XФ,,24,Noticeþ
+MS,X,X,X,,,24,Consentþ
+MO,X,X,,XФ,,72,Consent
+MT,X,Private,,,,▼,Noticeβ
+NE,X,X,,,X,24,Consent
+NV,X,Private,,,,,▼
+NH,,,,,,,Notice
+NJ,X,Private,,,,,▼
+NM,X,X,,,,,▼
+NY,X,,,,,,
+NC,X,X,,,X,72,Consent
+ND,X,X,,,,24,Consentþ
+OH,X,X,,,,24,Consent
+OK,X,Private,X,XФ,,72,Consent and Notice
+OR,X,Private,,,,,
+PA,X,Private,,,,24,Consent
+RI,X,,,,,,Consent
+SC,X,Private,,,,24,Consent
+SD,X,X,,X,X,72◊,Notice
+TN,X,X,,,,▼,Consent
+TX,X,Private,X,X,X,24,Consent and Notice
+UT,X,Private,,XФ,,72◊,Consent and Notice
+VT,,,,,,,
+VA,X,X,,,,,Consent and Notice
+WA,X,X,,,,,
+WV,,,,,X,24,Noticeξ
+WI,X,X,,X,,24,Consentξ
+WY,X,Private,,,,,Consent and Notice
