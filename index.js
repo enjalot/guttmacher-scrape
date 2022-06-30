@@ -69,7 +69,7 @@ scrapeTable("https://www.guttmacher.org/print/state-policy/explore/overview-abor
       let data = response.tableData;
       fs.writeFileSync("data/abortion-policy-raw.html", JSON.stringify(response.html));
       fs.writeFileSync("data/abortion-policy-raw.json", JSON.stringify(data));
-      console.log("raw", data)
+      // console.log("raw", data)
 
       // skip the first 3 rows: the table name and the two header rows
       let rows = data.slice(3, data.length - 1)
