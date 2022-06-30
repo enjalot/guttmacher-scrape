@@ -106,16 +106,17 @@ scrapeTable("https://www.guttmacher.org/print/state-policy/explore/overview-abor
         // write page1diff to a file
         fs.writeFileSync(`data/${name}.diff.json`, JSON.stringify([...diff.entries()]));
       } else {
+        // Actually, don't delete anything, leave it there and manually delete after debugging
         // delete the diff file if no difference
-        try {
-          fs.unlinkSync(`data/${name}.diff.json`);
-          fs.unlinkSync(`data/${name}.csv.previous`);
-        } catch (e) {}
+        // try {
+        //   fs.unlinkSync(`data/${name}.diff.json`);
+        //   fs.unlinkSync(`data/${name}.csv.previous`);
+        // } catch (e) {}
       }
     } catch (e) {
-      try {
-        fs.unlinkSync(`data/${name}.csv.previous`);
-      } catch (e) {}
+      // try {
+      //   fs.unlinkSync(`data/${name}.csv.previous`);
+      // } catch (e) {}
     }
     fs.writeFileSync(`data/${name}.csv`, csv);
     console.log("wrote", `data/${name}.csv`)
