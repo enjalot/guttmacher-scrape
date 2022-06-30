@@ -35,6 +35,9 @@ const absenceColumns = ({
 })
 
 
+let now = new Date();
+fs.writeFileSync(`data/last-run.txt`, now.toISOString())
+
 // get the overview tables
 scrapeTable("https://www.guttmacher.org/print/state-policy/explore/overview-abortion-laws")
   .then(function(response) {
