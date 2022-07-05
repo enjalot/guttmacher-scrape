@@ -86,7 +86,11 @@ scrapeTable("https://www.guttmacher.org/print/state-policy/explore/overview-abor
         s Temporarily enjoined by court order; law not in effect.
         †   Law includes an exception to protect the life of the patient.
         ‡   Law includes an exception to protect the health of the patient.
-        Ψ  Law includes an exception in cases of rape.`]
+        Ψ  Law includes an exception in cases of rape.
+        ♌︎  State bans abortion through a different law.
+        ⌘  Law limits the effect of out-of-state abortion restrictions and bans on abortion providers in the state and in some states these protections also extend to individuals that provide information on abortion and logistical and financial assistance to patients.
+        `
+      ]
       processPage("abortion-policy", rows, absenceColumns, keyRaw);
     })
 
