@@ -82,6 +82,7 @@ scrapeTable("https://www.guttmacher.org/print/state-policy/explore/overview-abor
       let rows = data.slice(3, data.length - 1)
       // this isn't part of the table in this page so we can't parse it
       // without adding more scrape logic to scrape.js
+      // TODO: automate this!
       let keyRaw = [`q Permanently enjoined by court order; law not in effect.
         s Temporarily enjoined by court order; law not in effect.
         †   Law includes an exception to protect the life of the patient.
@@ -132,5 +133,7 @@ scrapeTable("https://www.guttmacher.org/print/state-policy/explore/overview-abor
     });
     fs.writeFileSync(`data/${name}-key.json`, JSON.stringify(key));
     console.log("wrote", `data/${name}-key.json`)
+    fs.writeFileSync(`data/${name}-columns.json`, JSON.stringify(columns));
+    console.log("wrote", `data/${name}-columns.json`)
 
   }
